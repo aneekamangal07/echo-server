@@ -1,9 +1,6 @@
 const { Server } = require("socket.io");
 const io = new Server(8000, {
-  cors: {
-    origin: "https://echo-client.vercel.app/",
-    methods: ["GET", "POST"],
-  },
+  cors: true,
 });
 
 const emailToSocketIdMap = new Map();
